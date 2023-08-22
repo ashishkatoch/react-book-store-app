@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+section.card-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+form{
+  margin-bottom: 30px;
+}
+.card {
+  box-shadow: 0px 3px 1px aliceblue;
+  height: 141px;
+  padding: 10px;
+  border: 1px solid aliceblue;
+  position: relative;
+  width: 200px;
+  background: #80ff7f;
+  border-radius: 12px;
+}
+span.edit, span.delete {
+  padding: 5px;
+  border: 1px solid;
+  border-color: grey;
+  border-radius: 12px;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.action-section {
+  position: absolute;
+  right: 9px;
+  top: 14px;
+}
+span.edit:hover, span.delete:hover{
+  background-color: aqua;
+  color: white;
 }
