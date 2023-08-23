@@ -1,11 +1,12 @@
 import BookShow from "./BookShow";
-function BookList({ passBooksList, onEditBook,removeFromBookList }) {
-  const renderedBookList = passBooksList.map((book, index) => {
-    return <BookShow key={index} book={book} onEditBook={onEditBook} onDelBook={removeFromBookList}/>;
+function BookList({ passBooksList, onEditBook,onDeleteBookById }) {
+  console.log(passBooksList);
+  const renderedBookList = passBooksList.map((book) => {
+    return <BookShow key={book.id} book={book} onEditBook={onEditBook} onDeleteBookById={onDeleteBookById}/>;
   });
   return (
     <>
-      <section className="card-section">{renderedBookList}</section>
+      <section className="card-section  row">{renderedBookList}</section>
     </>
   );
 }

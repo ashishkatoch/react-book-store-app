@@ -12,7 +12,7 @@ function BookEdit({ onEditBook, book,hideEditForm }) {
   };
   return (
     <>
-      <div className="edit-title-section mb-3 row">
+      <div className="edit-title-section mb-3">
         <form onSubmit={handleFormSubmit}>
           <div className="input-group mb-3">
             <span className="input-group-text" id="basic-addon1">

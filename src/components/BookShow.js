@@ -1,6 +1,6 @@
 import { useState } from "react";
 import BookEdit from "./BookEdit";
-function BookShow({ book, onEditBook,onDelBook }) {
+function BookShow({ book, onEditBook,onDeleteBookById }) {
   const [toggle, setToggle] = useState(false);
   const showEditForm = () => {
     setToggle(true);
@@ -9,7 +9,7 @@ function BookShow({ book, onEditBook,onDelBook }) {
     setToggle(false);
   };  
   const deleteCurrentCard = () => {
-    onDelBook(book.id);
+    onDeleteBookById(book.id);
   };
   
   let customHTML;
@@ -21,7 +21,7 @@ function BookShow({ book, onEditBook,onDelBook }) {
   
   return (
     <>
-      <div className="card mb-3 d-grid gap-3" key={book.id} >
+      <div className="card mb-3 d-grid gap-3 col-4 col-sm-6" key={book.id} >
         <div className="card-body">
           <span className="edit" onClick={showEditForm}>
             =
